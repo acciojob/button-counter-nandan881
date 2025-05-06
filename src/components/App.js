@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React,{useState} from "react";
+const App = ()=>{
 
-function ButtonCounter() {
-  const [count, setCount] = useState(0);
+  const [count,setCount] = useState(0)
 
-  const handleClick = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
+  const onAdd = ()=>{
+    setCount(count+1)
+  }
   return (
-    <div>
-      <h2>Button Counter</h2>
-      <p>Button clicked {count} {count === 1 ? 'time' : 'times'}</p>
-      <button onClick={handleClick}>Click Me</button>
+    <div >
+    <p>Button clicked {count} times</p>
+    <button onClick={onAdd}>Click me</button>
     </div>
-  );
+  )
 }
-
-export default ButtonCounter;
+export default App
